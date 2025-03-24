@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Define dimensions for text sizes -->
+        <dimen name="text_size_small">12sp</dimen>
+        <dimen name="text_size_medium">16sp</dimen>
+        <dimen name="text_size_large">20sp</dimen>
+        <dimen name="text_size_extra_large">45sp</dimen>
+
+
+        <!-- Define dimensions for margins and paddings -->
+        <dimen name="margin_small">8dp</dimen>
+        <dimen name="margin_medium">16dp</dimen>
+        <dimen name="margin_large">24dp</dimen>
+
+        <!-- Define dimensions for view sizes -->
+        <dimen name="button_width">200dp</dimen>
+        <dimen name="button_height">48dp</dimen>
+
+</resources>

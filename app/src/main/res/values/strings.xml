@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">TravelPlannerApp</string>
+    <string name="Welcome_back_message">Welcome!</string>
+    <string name="application_name">Please fill the input here</string>
+    <string name="email_hint">Email</string>
+    <string name="fullname">Full Name</string>
+    <string name="password_hint">Password</string>
+    <string name="register_title">Create Account</string>
+    <string name="confirm_pass_hint">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="choose_login_options">choose login options</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">don\'t have an account?</string>
+    <string name="please_fill_the_input_below_here">Please fill the input below here</string>
+    <string name="back_button">back_button</string>
+    <string name="recent_history">Recent History</string>
+    <string name="chat">Start chat</string>
+
+</resources>

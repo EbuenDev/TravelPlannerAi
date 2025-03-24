@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TravelPlannerApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorOutline">#FFFFFF</item> <!-- Ensures outline (stroke) color is white -->
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.TravelPlannerApp" parent="Base.Theme.TravelPlannerApp" />
+</resources>
