@@ -54,6 +54,8 @@ dependencies {
     implementation libs.firebase.analytics
     implementation(libs.firebase.firestore)
 
+    implementation libs.google.services
+
     //for gif animation
     implementation libs.android.gif.drawable
 
