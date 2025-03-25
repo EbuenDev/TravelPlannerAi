@@ -17,13 +17,15 @@ import com.example.travelplannerapp.databinding.ActivityRegisterBinding;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.ktx.Firebase;
 
+import javax.annotation.Nonnull;
+
 import DataPackage.FirebaseHelper;
 
 
 public class RegisterActivity extends AppCompatActivity {
 
     public ActivityRegisterBinding binding;
-    private FirebaseHelper firebaseHelper;
+    private @Nonnull FirebaseHelper firebaseHelper;
 
 //    private OnBackPressedDispatcher onBackPressedDispatcher;
     @Override

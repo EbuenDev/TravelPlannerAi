@@ -23,10 +23,33 @@ public class FirebaseHelper {
         void onFailure(String errorMessage);
     }
 
-    // Register user with email/password
-    public Task<AuthResult> registerUser(String email, String password) {
-        return auth.createUserWithEmailAndPassword(email, password);
+    public interface LoginCallback {
+        void onSuccess(FirebaseUser user);
+        void onFailure(String errorMessage);
     }
+
+    // Login user with email/password
+    public void loginUser(String email, String password, final LoginCallback callback){
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+                   if(task.isSuccessful()){
+                       FirebaseUser user = auth.getCurrentUser();
+                       if (user != null) {
+                           callback.onSuccess(user);
+                       } else {
+                           callback.onFailure("User not found");
+                       }
+                   }else{
+                       callback.onFailure(task.getException() != null ?
+                               task.getException().getMessage() : "Login failed");
+                   }
+                });
+    }
+
+    public FirebaseUser getCurrentUser() {
+        return auth.getCurrentUser();
+    }
+
     
     // Add user details to FireStore
     private void addUserToFirestore(String userId, String fullName, String email,
@@ -65,6 +88,10 @@ public class FirebaseHelper {
                                 task.getException().getMessage() : "Registration failed");
                     }
                 });
+    }
+
+    public void logoutUser(){
+        FirebaseAuth.getInstance().signOut();
     }
 
 }
