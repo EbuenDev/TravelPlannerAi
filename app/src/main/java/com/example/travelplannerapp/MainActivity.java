@@ -3,6 +3,7 @@ package com.example.travelplannerapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -37,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        binding.upgradeButton.setOnClickListener(v -> {
+
+            Toast.makeText(this, "This feature is not available yet", Toast.LENGTH_SHORT).show();
+        });
+
 
 
         binding.logoutButton.setOnClickListener(v -> {

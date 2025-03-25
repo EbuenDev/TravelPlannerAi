@@ -8,17 +8,35 @@
     android:background="@drawable/background"
     tools:context="UiPackage.LoginActivity">
 
-<!--    <pl.droidsonroids.gif.GifImageView-->
-<!--        android:layout_width="150dp"-->
-<!--        android:layout_height="150dp"-->
-<!--        android:src="@drawable/walking"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/textView"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/guideline2"-->
-<!--        app:layout_constraintHorizontal_bias="0.497"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/guideline"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="1.0" />-->
+    <!--    <pl.droidsonroids.gif.GifImageView-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:src="@drawable/walking"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/textView"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/guideline2"-->
+    <!--        app:layout_constraintHorizontal_bias="0.497"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guideline"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="1.0" />-->
 
+
+    <TextView
+        android:id="@+id/internet_notificationTextview"
+        android:layout_width="248dp"
+        android:layout_height="51dp"
+        android:background="@drawable/box"
+        android:drawableLeft="@drawable/baseline_signal_wifi_connected_no_internet_4_24"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:text="@string/no_internet_connection"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
 
     <TextView
         android:id="@+id/textView"
@@ -92,9 +110,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily="@font/poppins_thin"
             android:drawableStart="@drawable/outline_email_24"
             android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_thin"
             android:inputType="textEmailAddress"
             android:textColor="@color/dirty_white"
             android:textSize="@dimen/text_size_large" />
@@ -131,9 +149,9 @@
             android:layout_weight="1"
             android:drawableStart="@drawable/outline_lock_24"
             android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_thin"
             android:inputType="textPassword"
             android:textColor="@color/dirty_white"
-            android:fontFamily="@font/poppins_thin"
             android:textSize="@dimen/text_size_large" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -158,13 +176,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:backgroundTint="@color/dark_green"
+        android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="@string/login"
-        android:backgroundTint="@color/dark_green"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="@dimen/text_size_medium"
-        android:fontFamily="@font/poppins_bold"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintDimensionRatio="3:1"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -172,8 +190,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
         app:layout_constraintVertical_bias="0.671" />
-
-
 
 
     <TextView
@@ -191,7 +207,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button"
         app:layout_constraintVertical_bias="0.126" />
-
 
 
     <TextView

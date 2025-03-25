@@ -17,5 +17,6 @@
     <string name="back_button">back_button</string>
     <string name="recent_history">Recent History</string>
     <string name="chat">Start chat</string>
+    <string name="no_internet_connection">No Internet Connection</string>
 
 </resources>
