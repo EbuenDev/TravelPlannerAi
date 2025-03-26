@@ -61,6 +61,30 @@ public class LoginActivity extends AppCompatActivity {
         binding.registerTextView.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
         });
+
+        // Clear error on focus
+        binding.email.getEditText().setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                binding.email.setError(null);
+            }
+        });
+
+/// Revalidate when focus is lost
+        binding.email.getEditText().setOnFocusChangeListener((v, hasFocus) -> {
+            if (!hasFocus) {
+                // Get both email and password values for validation
+                String email = binding.email.getEditText().getText().toString().trim();
+                String password = binding.password.getEditText().getText().toString().trim();
+                validateInputs(email, password); // Pass both parameters
+            }
+        });
+
+// For password field (optional but recommended)
+        binding.password.getEditText().setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                binding.password.setError(null); // Clear password error
+            }
+        });
     }
 
     // Method to show network notification
@@ -152,6 +176,12 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+
+    private void clearEmailError() {
+        binding.email.setError(null);
+        binding.email.setErrorEnabled(false);
     }
     private static final int FADE_IN_DURATION = 200;
     private static final int FADE_OUT_START = 800; // Start fade out at 800ms
